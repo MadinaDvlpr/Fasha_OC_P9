@@ -15,8 +15,6 @@ public with sharing class AccountDataFactoryTest {
     }
     
     
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////
-// mettre les setup et créer les liste de compte pour les tests
    	@isTest
     public static void getAccountTest(){
         
