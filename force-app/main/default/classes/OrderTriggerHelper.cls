@@ -71,9 +71,6 @@ public with sharing class OrderTriggerHelper {
 
     public static void calculateNetAmountOrder(List<Order> orders){
         for (Order order : orders) {
-            System.debug('Mon total Amount');
-            System.debug(order.TotalAmount);
-            System.debug(order.ShippingCost__c);
             if (order.ShippingCost__c != null){
                 order.NetAmount__c = order.TotalAmount  - order.ShippingCost__c;
             } else {
