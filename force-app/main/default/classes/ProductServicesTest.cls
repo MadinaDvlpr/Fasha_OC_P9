@@ -1,6 +1,6 @@
 @isTest
-public with sharing class ProductDataFactoryTest {
-
+public with sharing class ProductServicesTest {
+    
     private static String productName = 'Bidule';
     @TestSetup
 

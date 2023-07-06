@@ -1,5 +1,5 @@
 @isTest
-public with sharing class AccountDataFactoryTest {
+public with sharing class AccountServicesTest {
     private static String accountName = 'MyAccountName';
     private static String nameLike = 'accountName-%';
     private static String pricebookName = 'MyPricebookName';

@@ -1,5 +1,5 @@
-@isTest
-public class OrderDataFactoryTest {
+@isTest 
+public with sharing class OrderServicesTest {
     private static String accountName = 'Madina';
     private static String accountOneOrder = 'AccountTest';
     private static String productName = 'Bidule';

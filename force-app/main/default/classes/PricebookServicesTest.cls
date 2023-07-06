@@ -1,5 +1,5 @@
 @isTest
-public with sharing class Pricebook2DataFactoryTest {
+public with sharing class PricebookServicesTest {
     
     // variables
     private static String accountName = 'Madina';
