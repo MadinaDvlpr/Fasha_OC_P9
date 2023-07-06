@@ -41,21 +41,14 @@ public with sharing class OrderServicesTest {
     
     @isTest
     static void updateOrdersStatusToActivatedTest(){
-        Account accountForThisTest = AccountSelector.getAccount(accountOneOrder);
-        Pricebook2 pricebookForThisTest = PricebookSelector.getPriceBookByName(pricebookName);
-        Product2 productForThisTest = ProductSelector.getProduct(productName);
-        Order orderForThisTest = TestDataFactory.createOrder(orderName, accountForThisTest.Id, pricebookForThisTest);
-        TestDataFactory.createPriceBookEntryForPricebookStandard(productForThisTest);
-        PricebookEntry pricebookEntryForThisTest = TestDataFactory.createPriceBookEntry(pricebookForThisTest, productForThisTest);
-  		OrderItem itemForThisTest = TestDataFactory.createOneOrderItem(orderForThisTest,productForThisTest,pricebookEntryForThisTest);
-        
-        System.debug(orderForThisTest);
-        System.debug(itemForThisTest);
-
-        
+        Account accountTest = AccountSelector.getAccount(accountName);
+        Order orderForThisTest = OrderSelector.getOrdersListForOneAccount(accountTest).get(0);
+      
         Test.startTest();
         OrderServices.updateOrdersStatusToActivated(orderForThisTest);
         Test.stopTest();
+        
+        orderForThisTest = [SELECT Id, AccountId, Status FROM Order WHERE Id = :orderForThisTest.Id];
       
         System.assertEquals('Activated', orderForThisTest.Status, 'should return a status Activated.');
         
