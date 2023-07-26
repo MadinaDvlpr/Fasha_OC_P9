@@ -6,21 +6,7 @@ public with sharing class TestDataFactory {
         insert account;
         return account;
     }
-    //Verifier si c'est bien ce que william voulait 
-    //créer une liste de compte ICI poubelle pas bon ! (batch a faire dans une test data factory et mettre ds attributs de la classe) rappeler juste methode unitaire dans une boucle
-    /**public static void createAccounts(Integer numberOfAccounts){
-        List<Account> accountsListToInsertForTest = new List<Account>();
-        for(Integer i = 0 ; i < numberOfAccounts ; i++){
-            AccountServices.createAccount();
-        }
-        insert accountsListToInsertForTest;
-    }
-    
-    public static void createAccount(){
-        Account accountCreated = new Account(Name = 'accountName');
-        insert accountCreated;
-    }
-    **/
+ 
     public static void createAccount(){
         Account accountCreated = new Account(Name = 'accountName');
         insert accountCreated;
